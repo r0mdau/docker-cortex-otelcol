@@ -9,5 +9,4 @@ RUN set -x && \
     rm -rf /var/lib/apt/lists/*
 
 EXPOSE      9009
-USER        nobody
 ENTRYPOINT  [ "/bin/cortex" ]
