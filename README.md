@@ -24,6 +24,6 @@ Schema :
 ```
 
 ## Setup
-Grafana Auth : admin admin
-Grafana > Data sources > prometheus > URL : http://cortex:9009/prometheus
-Grafana > Import > ID 1860
+* Grafana Auth : admin admin
+* Grafana > Data sources > prometheus > URL : http://cortex:9009/prometheus
+* Grafana > Import > ID 1860
