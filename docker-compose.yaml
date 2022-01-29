@@ -1,11 +1,9 @@
-version: "2"
+version: "3"
 services:
 
-  # node_exporter
   node_exporter:
     build: exporter
 
-  # Collector
   otel-collector:
     image: otel/opentelemetry-collector-contrib:latest
     command: ["--config=/etc/otel-collector-config.yaml"]
@@ -18,9 +16,8 @@ services:
       - "node_exporter"
       - "cortex"
     
-  # cortex
   cortex: 
-    image: ubuntu/cortex:1.10-21.10_beta
+    build: cortex
     command: ["-config.file=/single-process-config-blocks.yaml"]
     volumes:
       - ./cortex/single-process-config-blocks.yaml:/single-process-config-blocks.yaml
